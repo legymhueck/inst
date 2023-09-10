@@ -27,7 +27,7 @@ echo "title ArchLinux
 linux /vmlinuz-linux
 initrd /intel-ucode.img
 initrd /initramfs-linux.img
-options cryptdevice=/dev/disk/by-label/ROOT:arch root=/dev/mapper/arch rootflags=subvol=@ quiet nowatchdog quiet rw" > /boot/loader/entries/arch.conf
+options cryptdevice=/dev/disk/by-label/ROOT:arch root=/dev/mapper/arch zswap.enabled=0 rootflags=subvol=@ quiet nowatchdog quiet rw rootfstype=btrfs" > /boot/loader/entries/arch.conf
 
 systemctl enable acpid
 systemctl enable NetworkManager
