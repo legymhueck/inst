@@ -9,14 +9,15 @@ if [[ "$UID" -ne 0 ]]; then
 fi
 
 ### Config options
-target="/dev/sda"
+read -p "Username: " username
+read -p "Drive: " drive
+target="/dev/"$drive
 rootmnt="/mnt"
 locale="en_US.UTF-8"
 locale2="de_DE.UTF-8"
 keymap="de-latin1"
 timezone="Europe/Berlin"
 hostname="le"
-read -p "Username: " username
 # install whois to be able to use mkpasswd
 # SHA512 hash of password.
 # To generate, run 'mkpasswd -m sha-512'
@@ -65,17 +66,18 @@ guipacs=(
     doublecmd-qt5
     hyprland
     hyprpaper
-	kitty
-	firefox 
-	nm-connection-editor
-	neofetch
-	mousepad
+    kitty
+    firefox 
+    nm-connection-editor
+    neofetch
+    mousepad
     qt5ct
     qt5-wayland
     qt6-wayland
     rofi
- 	sbctl
+    sbctl
     waybar
+    wofi
     xdg-desktop-portal-hyprland 
 	)
 
