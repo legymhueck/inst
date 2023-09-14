@@ -1,0 +1,93 @@
+{
+  "layer": "top",
+  "position": "top",
+  "height": 24,
+  "modules-left": [
+    "hyprland/workspaces"
+  ],
+  "modules-center": [
+    "hyprland/window"
+  ],
+  "modules-right": [
+    "clock",
+    "memory",
+    "pulseaudio",
+    "tray"
+  ],
+  "custom/launcher": {
+    "format": "<span color='#F38BA8'></span>",
+    "on-click": "fuzzel"
+  },
+  "hyprland/workspaces": {
+    "format": "{name}: {icon}",
+    "format-icons": {
+      "1": "",
+      "2": "",
+      "3": "",
+      "4": "",
+      "5": "",
+      "focused": "",
+      "default": ""
+    },
+    "sort-by-number": true
+  },
+  "custom/updates": {
+    "exec": "(checkupdates ; yay -Qua) | wc -l",
+    "interval": 12000,
+    "format": " {}",
+    "on-click": "alacritty start yay -Syu --noconfirm --devel"
+  },
+  "tray": {
+    "on-click": "",
+    "icon-size": 17,
+    "spacing": 10
+  },
+  "clock": {
+    "on-click": "",
+    // "format": "{: %R   %d/%m}", 
+    "format": "{: %R   %A, %e %B %G}",
+    // LC_TIME="de_DE.UTF-8" date '+%A, %e %B %G | %H:%M'
+    "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>"
+  },
+  "network": {
+    "format-wifi": "直 {essid}",
+    "format-ethernet": " {essid}",
+    "format-linked": "{ifname} (No IP) ",
+    "format-disconnected": "睊 Disc.",
+    "tooltip-format-wifi": "Signal Strenght: {signalStrength}% | Down Speed: {bandwidthDownBits}, Up Speed: {bandwidthUpBits}",
+    // "on-click": "wofi-wifi-menu",
+    "on-click": "alacritty -e nmtui"
+  },
+  "cpu": {
+    "on-click": "",
+    "interval": 10,
+    "format": " {}%",
+    "max-length": 10
+  },
+  "memory": {
+    "on-click": "",
+    "interval": 30,
+    "format": " {used:0.1f}G/{total:0.1f}G",
+    "max-length": 15
+  },
+  "pulseaudio": {
+    "format": "{icon} {volume}%",
+    "format-muted": "ﱝ Muted",
+    "on-click": "~/.config/hypr/scripts/volume_ctl.sh",
+    "scroll-step": 1,
+    "format-icons": {
+      "headphone": "",
+      "hands-free": "",
+      "headset": "",
+      "phone": "",
+      "portable": "",
+      "car": "",
+      "default": [
+        "",
+        "",
+        "墳",
+        ""
+      ]
+    }
+  }
+}
