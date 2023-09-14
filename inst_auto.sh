@@ -182,12 +182,8 @@ arch-chroot "$rootmnt" bootctl install --esp-path=/efi
 arch-chroot "$rootmnt" usermod -L root
 #and we're done
 
-
 echo "-----------------------------------"
 echo "- Install complete. Rebooting.... -"
 echo "-----------------------------------"
-sleep 10
 sync
-reboot
-
 
