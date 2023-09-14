@@ -34,10 +34,12 @@ crypt_password="changeme"
 ### Packages to pacstrap ##
 pacstrappacs=(
     base
+    base-devel
     btrfs-progs
     cryptsetup
     dosfstools
     e2fsprogs
+    git
     linux
     linux-firmware
     intel-ucode
@@ -185,5 +187,12 @@ arch-chroot "$rootmnt" usermod -L root
 echo "-----------------------------------"
 echo "- Install complete. Rebooting.... -"
 echo "-----------------------------------"
+
+cp ~/inst/ /mnt/home/michael/
+cp ~/inst/home/.config /mnt/home/michael/
+cp ~/inst/home/.local/.gtkrc-2.0 /mnt/home/michael/
+cp ~/inst/usr/local/bin/hl /mnt/usr/local/bin/
+cp ~/inst/etc/environment /mnt/etc/
+
 sync
 
