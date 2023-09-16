@@ -184,15 +184,18 @@ arch-chroot "$rootmnt" bootctl install --esp-path=/efi
 arch-chroot "$rootmnt" usermod -L root
 #and we're done
 
-echo "-----------------------------------"
-echo "- Install complete. Rebooting.... -"
-echo "-----------------------------------"
+echo "---------------------------------------------------"
+echo "- Copying installer files to the new installation -"
+echo "---------------------------------------------------"
 
-cp ~/inst/ /mnt/home/michael/
-cp ~/inst/home/.config /mnt/home/michael/
-cp ~/inst/home/.local/.gtkrc-2.0 /mnt/home/michael/
+cp ~/inst/ /mnt/home/$username/
+cp ~/inst/home/.config /mnt/home/$username/
+cp ~/inst/home/.local/.gtkrc-2.0 /mnt/home/$username/
 cp ~/inst/usr/local/bin/hl /mnt/usr/local/bin/
 cp ~/inst/etc/environment /mnt/etc/
 
-sync
+echo "-----------------------------------"
+echo "- Install complete.Please reboot. -"
+echo "-----------------------------------"
 
+sync
