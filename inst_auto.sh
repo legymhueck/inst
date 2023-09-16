@@ -58,6 +58,7 @@ pacstrappacs=(
     python-setuptools
     starship
     sudo
+    udisks2
     unzip
     util-linux
     whois
@@ -79,7 +80,6 @@ guipacs=(
     rofi
     sbctl
     waybar
-    wofi
     xdg-desktop-portal-hyprland 
 	)
 
