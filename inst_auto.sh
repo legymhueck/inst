@@ -54,6 +54,7 @@ pacstrappacs=(
     pipewire-alsa
     pipewire-pulse
     pipewire-jack
+    polkit-kde-agent
     python-pip
     python-setuptools
     starship
