@@ -189,11 +189,11 @@ echo "---------------------------------------------------"
 echo "- Copying installer files to the new installation -"
 echo "---------------------------------------------------"
 
-cp ~/inst/ /mnt/home/$username/
-cp ~/inst/home/.config /mnt/home/$username/
-cp ~/inst/home/.local/.gtkrc-2.0 /mnt/home/$username/
-cp ~/inst/usr/local/bin/hl /mnt/usr/local/bin/
-cp ~/inst/etc/environment /mnt/etc/
+cp -r ~/inst /mnt/home/$username/
+cp -r ~/inst/home/.config /mnt/home/$username/
+cp -r ~/inst/home/.local/.gtkrc-2.0 /mnt/home/$username/
+cp -r ~/inst/usr/local/bin/hl /mnt/usr/local/bin/
+cp -r ~/inst/etc/environment /mnt/etc/
 
 echo "-----------------------------------"
 echo "- Install complete.Please reboot. -"
