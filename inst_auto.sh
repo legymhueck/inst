@@ -191,7 +191,7 @@ echo "---------------------------------------------------"
 
 cp -r ~/inst /mnt/home/$username/
 cp -r ~/inst/home/.config /mnt/home/$username/
-cp -r ~/inst/home/.local/.gtkrc-2.0 /mnt/home/$username/
+cp -r ~/inst/home/.gtkrc-2.0 /mnt/home/$username/
 cp -r ~/inst/usr/local/bin/hl /mnt/usr/local/bin/
 cp -r ~/inst/etc/environment /mnt/etc/
 
